@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo Preparing SonarQube container
 
@@ -32,7 +32,7 @@ fi
 
 echo Launching SonarQube instance
 
-exec su-exec sonarqube \
+exec gosu sonarqube \
   java -jar lib/sonar-application-$SONAR_VERSION.jar \
   -Dsonar.log.console=true \
   -Dsonar.jdbc.url="$SQLAZURECONNSTR_SONARQUBE_JDBC_URL" \
