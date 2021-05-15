@@ -38,4 +38,5 @@ exec gosu sonarqube \
   -Dsonar.jdbc.url="$SQLAZURECONNSTR_SONARQUBE_JDBC_URL" \
   -Dsonar.web.javaAdditionalOpts="$SONARQUBE_WEB_JVM_OPTS -Djava.security.egd=file:/dev/./urandom" \
   -Dsonar.path.data="/home/sonarqube/data" \
+  -Dsonar.es.bootstrap.checks.disable=true \
   "$@"
